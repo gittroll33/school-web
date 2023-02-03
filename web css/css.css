@@ -1,4 +1,4 @@
-p::first-letter {
+h1::first-letter {
     color: #0d21cc;
     font-size: xx-large;
     font: 1em comic;
