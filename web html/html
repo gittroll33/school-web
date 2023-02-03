@@ -9,8 +9,8 @@
   <style>
 h1::after {
     content: url(https://preview.redd.it/7rjl77a9kdm71.png?auto=webp&s=7b18a8ec0b60d57681f380fa1ef81d1c56bd2625); 
-    width: auto;
-    height: auto;
+    width: max-content;
+    height: max-content;
   }
     </style>
   </head>
