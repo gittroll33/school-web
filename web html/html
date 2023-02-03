@@ -7,6 +7,12 @@
     <title>test web</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <style>
+      h1::after{
+  content: url(smiley.gif);
+}
+    </style>
+  </head>
 
 
     <div class="grid-x grid-padding-x">
@@ -14,7 +20,7 @@
           <div class="callout">
             <h3>Welcome to our website this is a crossroad to all our sites! </h3>
             <p>this site was made by Iljuchin Huzvar and Klabenes</p>
-            <p>mega důležitej test</p>
+            <p>mega důležitej text</p>
               </div>
             </div>
           </div>
