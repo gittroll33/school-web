@@ -8,7 +8,9 @@
   
   <style>
 h1::after {
-    content: url(https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png); 
+    content: url(https://preview.redd.it/7rjl77a9kdm71.png?auto=webp&s=7b18a8ec0b60d57681f380fa1ef81d1c56bd2625); 
+    width: 10%;
+    height: 10%;
   }
     </style>
   </head>
