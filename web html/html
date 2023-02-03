@@ -14,16 +14,8 @@ h1::after {
   }
     </style>
   </head>
-
-
-    <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <div class="callout">
+          <body>
             <h1>Welcome to our website this is a crossroad to all our sites! </h1>
             <p>this site was made by Iljuchin Huzvar and Klabenes</p>
             <p>mega důležitej text</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          </body>
