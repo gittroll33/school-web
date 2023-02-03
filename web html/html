@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/app.css">
     <style>
       h1::after{
-        content: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTrollface&psig=AOvVaw0DvPdiMwcKXsWD_PsDTtWN&ust=1675545184353000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLjuzq6i-vwCFQAAAAAdAAAAABAD);
+        content: "";
+        image: url (https://www.google.com/search?q=trollface&sxsrf=AJOqlzXPl2Z1EZcyqfSrWaYydDtmTfN6cQ:1675459198327&tbm=isch&source=iu&ictx=1&vet=1&fir=j7g3eCyrG42O5M%252C74T5DSmEo0ydQM%252C%252Fg%252F1q54w7n0v%253Bt04YIKIyrt-igM%252CvA418vh1wZOxGM%252C_%253BnfMhjifg41d5yM%252C_jO7Ex5xtanv-M%252C_%253BqwbCTGC2nY2VcM%252CMeZPaGtWD4MbWM%252C_%253BbChTZRZju-WTyM%252CjD-o2cNjKCbOoM%252C_&usg=AI4_-kRytLv7YgIspEbBfJ1rE3eiy4Fy2g&sa=X&ved=2ahUKEwj_jOjyo_r8AhU2AxAIHeQMAykQ_B16BAheEAE#imgrc=j7g3eCyrG42O5M);
                }
     </style>
   </head>
