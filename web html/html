@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/app.css">
     <style>
       h1::after{
-        <img src=https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTrollface&psig=AOvVaw2Ek8S0T9CWl_0VlO0gRsMT&ust=1675544818618000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNDikoCh-vwCFQAAAAAdAAAAABAE>
+        content: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTrollface&psig=AOvVaw0DvPdiMwcKXsWD_PsDTtWN&ust=1675545184353000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLjuzq6i-vwCFQAAAAAdAAAAABAD);
                }
     </style>
   </head>
