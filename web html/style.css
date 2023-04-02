@@ -69,7 +69,6 @@ h1::first-letter {
     overflow: hidden;
   }
 
-
   .footer {
     position: fixed;
     left: 0;
@@ -79,5 +78,7 @@ h1::first-letter {
     color: rgb(238, 202, 123);
     text-align: center;
   }
+
+  
 
 
