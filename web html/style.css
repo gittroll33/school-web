@@ -30,13 +30,13 @@ h1::first-letter {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
-  .links {
+  .lanks {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
   }
   
-  .links a {
+  .lanks a {
     display: block;
     padding: 10px 20px;
     font-size: 24px;
@@ -49,7 +49,7 @@ h1::first-letter {
     transition: all 0.2s ease;
   }
   
-  .links a:hover {
+  .lanks a:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     background-color: #2c2f3e;
