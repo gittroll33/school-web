@@ -82,7 +82,11 @@ h1::first-letter {
 #funny {
   margin: 20px;
 }
-  
+
+#demo {
+  width: 50%;
+  height: 50%;
+}  
   
 
 
