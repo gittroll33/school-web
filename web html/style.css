@@ -69,7 +69,9 @@ h1::first-letter {
     overflow: hidden;
   }
 
-  
+  .lowresvideo { 
+    width: 900;
+  }
 
   .footer {
     position: fixed;
