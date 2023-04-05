@@ -7,7 +7,7 @@ h1::first-letter {
 
   p:hover{color: blueviolet;}
   p {
-    width: auto;
+    width: max-content;
   }
   
   body {
