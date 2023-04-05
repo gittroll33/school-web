@@ -10,7 +10,6 @@ h1::first-letter {
   p {
     width: max-content;
     text-align: center;
-    display: flex;
   }
   
   body {
