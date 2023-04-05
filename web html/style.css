@@ -6,9 +6,10 @@ h1::first-letter {
   }
 
   p:hover{color: blueviolet;}
-  
+
   p {
     width: max-content;
+    text-align: center;
   }
   
   body {
