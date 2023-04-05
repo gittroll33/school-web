@@ -16,6 +16,8 @@ h1::first-letter {
     background-color: #0c0e16;
     color: #fff;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
   }
   
   .container {
