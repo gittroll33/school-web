@@ -10,6 +10,7 @@ h1::first-letter {
   p {
     
     text-align: center;
+    margin: 0 auto;
   }
   
   body {
