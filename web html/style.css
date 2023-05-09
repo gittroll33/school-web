@@ -104,7 +104,7 @@ audio {
   width: 100%;
   height: auto;
   border: none;
-  outline: none;
+  outline: 2px;
   background-color: transparent;
 }
 
