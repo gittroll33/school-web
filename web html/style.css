@@ -80,7 +80,7 @@ h1::first-letter {
   }
 
   .footer {
-    position: static;
+    position: relative;
   bottom: -10;
   left: 0;
   right: 0;
