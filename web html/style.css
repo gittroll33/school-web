@@ -86,13 +86,6 @@ h1::first-letter {
     overflow: hidden;
   }
 
-  .footer {
-    position: relative;
-  bottom: 0;
-    width: 100%;
-    background-color: rgb(55, 52, 102);
-    color: rgb(238, 202, 123);
-    text-align: center;
-  }
+  
 
 
