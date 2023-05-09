@@ -82,7 +82,7 @@ h1::first-letter {
   .footer {
     position: relative;
   bottom: -100px;
-    width: 120%;
+    width: 100%;
     background-color: rgb(55, 52, 102);
     color: rgb(238, 202, 123);
     text-align: center;
