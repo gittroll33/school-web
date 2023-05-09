@@ -68,7 +68,11 @@ h1::first-letter {
   .links a + a {
     margin-top: 10px;
   }
-  
+
+  #mylink {
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/330/1004/860/beautiful-green-leaves-monstera-hd-wallpaper-preview.jpg);
+  }
+
   .background {
     background-image: url(https://i.pinimg.com/originals/ea/1d/97/ea1d9797c9bf3dda7a23b238e5e4b364.jpg);
     opacity: 70%;
