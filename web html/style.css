@@ -81,7 +81,7 @@ h1::first-letter {
 
   .footer {
     position: static;
-  bottom: 0;
+  bottom: -10;
   left: 0;
   right: 0;
     width: 100%;
