@@ -80,7 +80,7 @@ h1::first-letter {
   }
 
   .footer {
-    position: static;
+    position: sticky;
     bottom: 0;
     width: 100%;
     background-color: rgb(55, 52, 102);
