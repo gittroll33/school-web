@@ -104,8 +104,8 @@ audio {
   width: 100%;
   height: auto;
   border: none;
-  outline: 2px;
-  background-color: transparent;
+  outline: none;
+  background-color: white;
 }
 
 /* Style audio controls */
