@@ -27,7 +27,6 @@ h1::first-letter {
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    z-index: 1;
     text-align: center;
    align-items: center; justify-content: center;
   }
