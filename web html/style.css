@@ -22,7 +22,7 @@ h1::first-letter {
   }
   
   .container {
-    width: 60vw;
+    width: 100vw;
     margin: 0 auto;
     padding: 20px;
     position: relative;
