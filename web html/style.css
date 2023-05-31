@@ -69,7 +69,9 @@ h1::first-letter {
 
   #number3 {
     background-image: url(https://c4.wallpaperflare.com/wallpaper/330/1004/860/beautiful-green-leaves-monstera-hd-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
   }
+
 
 
   .background {
