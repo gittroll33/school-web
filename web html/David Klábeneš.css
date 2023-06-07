@@ -1,18 +1,5 @@
 body {
-    background: linear-gradient(45deg, #1a1a1a, #000, #1a1a1a);
-    background-size: 200% 200%;
-    animation: ambientBackground 10s ease infinite;
-  }
-  
-  @keyframes ambientBackground {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    background-color: #1a1a1a;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   }
   
