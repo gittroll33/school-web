@@ -5,3 +5,36 @@ body {
 p {
     color: aliceblue;
 }
+#piano {
+    display: flex;
+    height: 200px;
+  }
+  
+  .key {
+    width: 30px;
+    height: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  
+  .white {
+    background-color: white;
+  }
+  
+  .black {
+    background-color: black;
+    position: relative;
+    margin-left: -15px;
+    z-index: 1;
+  }
+  
+  .black:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background-color: black;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
