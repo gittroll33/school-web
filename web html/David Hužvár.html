@@ -1,13 +1,27 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="davidhuzvar.css" /> 
-    <title>test web</title>
-  <style></style>
-  </head>
-  <body>
-    
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Moje stranka</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+       <h1>Můj Deník</h1>
+       <p>Aktuální datum: <?php echo date("32.13.2025"); ?></p>
+   </header>
+   <section id="entries">
+______
+   </section>
+   <footer>
+       <textarea id="newEntry" placeholder="Napište svůj zápis"></textarea>
+       <button onclick="addEntry()">Přidat zápis</button>
+   </footer>
+   <aside id="sidebar">
+       <img src="https://www.shutterstock.com/image-photo/impressed-handsome-young-person-holds-600nw-2289540383.jpg" alt="Obrázek do deníku">
+   </aside>
+   <script src="script.js"></script>
+</body>
+</html>
