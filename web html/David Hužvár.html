@@ -1,55 +1,65 @@
-<?php
-session_start();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Můj blog</title>
+</head>
+<body>
+    <?php
+    session_start();
 
-// Přihlašovací údaje
-$uzivatel = 'moje_jmeno';
-$heslo = 'moje_heslo';
+    // Přihlašovací údaje
+    $uzivatel = 'moje_jmeno';
+    $heslo = 'moje_heslo';
 
-// Kontrola přihlášení
-if (isset($_SESSION['prihlasen']) && $_SESSION['prihlasen'] === true) {
-    // Uživatel je přihlášen
-} else {
-    // Uživatel není přihlášen
-    if (isset($_POST['uzivatel']) && isset($_POST['heslo'])) {
-        // Pokud byla odeslána přihlašovací formulář, zkontroluj údaje
-        if ($_POST['uzivatel'] === $uzivatel && $_POST['heslo'] === $heslo) {
-            // Údaje jsou správné, ulož informaci o přihlášení do session
-            $_SESSION['prihlasen'] = true;
-        } else {
-            // Údaje jsou nesprávné, zobraz chybu
-            echo 'Nesprávné přihlašovací údaje.';
+    // Kontrola přihlášení
+    if (isset($_SESSION['prihlasen']) && $_SESSION['prihlasen'] === true) {
+        // Uživatel je přihlášen
+    } else {
+        // Uživatel není přihlášen
+        if (isset($_POST['uzivatel']) && isset($_POST['heslo'])) {
+            // Pokud byla odeslána přihlašovací formulář, zkontroluj údaje
+            if ($_POST['uzivatel'] === $uzivatel && $_POST['heslo'] === $heslo) {
+                // Údaje jsou správné, ulož informaci o přihlášení do session
+                $_SESSION['prihlasen'] = true;
+            } else {
+                // Údaje jsou nesprávné, zobraz chybu
+                echo 'Nesprávné přihlašovací údaje.';
+            }
+        }
+
+        // Pokud uživatel není přihlášen, zobraz přihlašovací formulář
+        if (!isset($_SESSION['prihlasen']) || $_SESSION['prihlasen'] !== true) {
+    ?>
+            <form method="post" action="">
+                <label for="uzivatel">Uživatelské jméno:</label><br>
+                <input type="text" id="uzivatel" name="uzivatel"><br>
+                <label for="heslo">Heslo:</label><br>
+                <input type="password" id="heslo" name="heslo"><br>
+                <input type="submit" value="Přihlásit se">
+            </form>
+    <?php
+            // Konec skriptu, pokud uživatel není přihlášen
+            exit;
         }
     }
 
-    // Pokud uživatel není přihlášen, zobraz přihlašovací formulář
-    if (!isset($_SESSION['prihlasen']) || $_SESSION['prihlasen'] !== true) {
-?>
-        <form method="post" action="">
-            <label for="uzivatel">Uživatelské jméno:</label><br>
-            <input type="text" id="uzivatel" name="uzivatel"><br>
-            <label for="heslo">Heslo:</label><br>
-            <input type="password" id="heslo" name="heslo"><br>
-            <input type="submit" value="Přihlásit se">
-        </form>
-<?php
-        // Konec skriptu, pokud uživatel není přihlášen
-        exit;
+    // Zde by byl kód pro zobrazení blogu s 10 příspěvky
+    // Příspěvky by mohly být uloženy v databázi nebo v souboru, zde je ukázka jednoduchého výpisu:
+
+    // Příspěvky v poli
+    $prispevky = array(
+        array('titulek' => 'První příspěvek', 'obsah' => 'Obsah prvního příspěvku'),
+        array('titulek' => 'Druhý příspěvek', 'obsah' => 'Obsah druhého příspěvku'),
+        // a tak dále...
+    );
+
+    // Výpis příspěvků
+    foreach ($prispevky as $prispevek) {
+        echo '<h2>' . $prispevek['titulek'] . '</h2>';
+        echo '<p>' . $prispevek['obsah'] . '</p>';
     }
-}
-
-// Zde by byl kód pro zobrazení blogu s 10 příspěvky
-// Příspěvky by mohly být uloženy v databázi nebo v souboru, zde je ukázka jednoduchého výpisu:
-
-// Příspěvky v poli
-$prispevky = array(
-    array('titulek' => 'První příspěvek', 'obsah' => 'Obsah prvního příspěvku'),
-    array('titulek' => 'Druhý příspěvek', 'obsah' => 'Obsah druhého příspěvku'),
-    // a tak dále...
-);
-
-// Výpis příspěvků
-foreach ($prispevky as $prispevek) {
-    echo '<h2>' . $prispevek['titulek'] . '</h2>';
-    echo '<p>' . $prispevek['obsah'] . '</p>';
-}
-?>
+    ?>
+</body>
+</html>
