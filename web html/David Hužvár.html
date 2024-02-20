@@ -1,27 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Moje stranka</title>
-   <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-   <header>
-       <h1>Můj Deník</h1>
-       <p>Aktuální datum: <?php echo date("32.13.2025"); ?></p>
-   </header>
-   <section id="entries">
-______
-   </section>
-   <footer>
-       <textarea id="newEntry" placeholder="Napište svůj zápis"></textarea>
-       <button onclick="addEntry()">Přidat zápis</button>
-   </footer>
-   <aside id="sidebar">
-       <img src="https://www.shutterstock.com/image-photo/impressed-handsome-young-person-holds-600nw-2289540383.jpg" alt="Obrázek do deníku">
-   </aside>
-   <script src="script.js"></script>
-</body>
-</html>
+<?php
+session_start();
+
+// Přihlašovací údaje
+$uzivatel = 'moje_jmeno';
+$heslo = 'moje_heslo';
+
+// Kontrola přihlášení
+if (isset($_SESSION['prihlasen']) && $_SESSION['prihlasen'] === true) {
+    // Uživatel je přihlášen
+} else {
+    // Uživatel není přihlášen
+    if (isset($_POST['uzivatel']) && isset($_POST['heslo'])) {
+        // Pokud byla odeslána přihlašovací formulář, zkontroluj údaje
+        if ($_POST['uzivatel'] === $uzivatel && $_POST['heslo'] === $heslo) {
+            // Údaje jsou správné, ulož informaci o přihlášení do session
+            $_SESSION['prihlasen'] = true;
+        } else {
+            // Údaje jsou nesprávné, zobraz chybu
+            echo 'Nesprávné přihlašovací údaje.';
+        }
+    }
+
+    // Pokud uživatel není přihlášen, zobraz přihlašovací formulář
+    if (!isset($_SESSION['prihlasen']) || $_SESSION['prihlasen'] !== true) {
+?>
+        <form method="post" action="">
+            <label for="uzivatel">Uživatelské jméno:</label><br>
+            <input type="text" id="uzivatel" name="uzivatel"><br>
+            <label for="heslo">Heslo:</label><br>
+            <input type="password" id="heslo" name="heslo"><br>
+            <input type="submit" value="Přihlásit se">
+        </form>
+<?php
+        // Konec skriptu, pokud uživatel není přihlášen
+        exit;
+    }
+}
+
+// Zde by byl kód pro zobrazení blogu s 10 příspěvky
+// Příspěvky by mohly být uloženy v databázi nebo v souboru, zde je ukázka jednoduchého výpisu:
+
+// Příspěvky v poli
+$prispevky = array(
+    array('titulek' => 'První příspěvek', 'obsah' => 'Obsah prvního příspěvku'),
+    array('titulek' => 'Druhý příspěvek', 'obsah' => 'Obsah druhého příspěvku'),
+    // a tak dále...
+);
+
+// Výpis příspěvků
+foreach ($prispevky as $prispevek) {
+    echo '<h2>' . $prispevek['titulek'] . '</h2>';
+    echo '<p>' . $prispevek['obsah'] . '</p>';
+}
+?>
