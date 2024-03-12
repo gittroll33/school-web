@@ -178,3 +178,144 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <?php
 }
 ?> 
+__________
+    <?php
+session_start();
+
+$validUsername = 'demo';
+$validPassword = 'password';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($username === $validUsername && $password === $validPassword) {
+        $_SESSION['loggedin'] = true;
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        $error = 'Neplatné uživatelské jméno nebo heslo';
+    }
+}
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Přihlášení</title>
+        <style>
+            body {
+                background-color: #781A83;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .login-container {
+                width: 300px;
+                padding: 20px;
+                box-shadow: 2px 2px 10px #888888;
+                background-color: orange;
+            }
+
+            .section {
+                background-color: #c7e0d1;
+                padding: 10px;
+                margin: 10px;
+                cursor: pointer;
+                box-shadow: 2px 2px 5px #888888;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Přihlášení na moji stránku</h2>
+           
+            <?php if (isset($error)) : ?>
+                <p style="color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
+
+            <form method="post" action="">
+                <label for="username">Jméno (demo):</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password">Heslo (password):</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <button type="submit">Přihlásit se</button>
+            </form>
+        </div>
+    </body>
+    </html>
+<?php
+} else {
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sekce</title>
+        <style>
+            body {
+                background-image:url('https://www.hdwallpapers.in/download/anime_nature_horizon_sky_silhouette_background_hd_anime-1920x1080.jpg');
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .container {
+                width: 40%;
+                padding: 20px;
+                box-shadow: 2px 2px 10px #888888;
+                background-color: white;
+            }
+
+            .section {
+                background-color: #37B4C3;
+                padding: 10px;
+                margin: 10px;
+                cursor: pointer;
+                box-shadow: 2px 2px 5px #888888;
+            }
+        </style>
+    </head>
+    <body>
+    <!-- Začátek kódu pro rozkliknutelné sekce -->
+<div id="sections">
+  <!-- Sekce 1 -->
+  <div class="section">
+    <div class="section-header">Hunter x Hunter (2011) </div>
+    <div class="section-content">
+      Obsah 
+    </div>
+    </div>
+
+<script>
+  // JavaScript pro ovládání rozkliknutelných sekcí
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.section');
+
+    sections.forEach(function(section) {
+      const header = section.querySelector('.section-header');
+
+      header.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+    </body>
+    </html>
+<?php
+}
+?>
