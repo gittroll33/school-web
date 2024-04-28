@@ -1,3 +1,4 @@
 document.getElementById('signUpButton').addEventListener('click', function() {
-    document.getElementById('number4').classList.remove('disabled');
-  });
+    var link4 = document.getElementById('number4');
+    link4.classList.remove('disabled');
+});
