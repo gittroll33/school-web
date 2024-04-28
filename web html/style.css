@@ -96,6 +96,14 @@ h1::first-letter {
     content: "\f023";
   }
   
+  .enabled {
+    color: white; /* Change to your desired color */
+    text-decoration: underline; /* If you want underlined links */
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   /* Disabled link styles */
 .disabled {
   color: rgba(255, 255, 255, 0.5);
@@ -105,14 +113,8 @@ h1::first-letter {
   pointer-events: none;
 }
 
-/* Enabled link styles */
-.enabled {
-  color: white; /* Change to your desired color */
-  text-decoration: underline; /* If you want underlined links */
-  cursor: pointer;
-  opacity: 1;
-  pointer-events: auto;
-}
+
+
 
 
   
