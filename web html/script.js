@@ -1,7 +1,7 @@
 console.log("Script is running");
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("The DOM is ready!");
+    console.log("The DOM is ready!")});
 
 
 document.getElementById('signUpButton').addEventListener('click', function() {
