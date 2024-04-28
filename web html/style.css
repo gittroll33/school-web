@@ -92,7 +92,7 @@ h1::first-letter {
     text-decoration: none;
   }
   
-  #number4 {
+  #number4::before {
     content: "\f023"; /* Font Awesome lock icon unicode */
     font-family: "FontAwesome";
     position: absolute;
