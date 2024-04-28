@@ -24,13 +24,17 @@
         </div>
         </div>
         <script>
-          document.getElementById("signUpButton").addEventListener("click", function() {
-            console.log("Button clicked"); // Confirms event listener is working
-            var link = document.getElementById("number4");
-            link.className = "enabled"; // Change the link's class to enabled
-            console.log("Class changed to:", link.className); // Verify class change
+          // Reference to the button and the link
+          const signUpButton = document.getElementById('signUpButton');
+          const number4 = document.getElementById('number4');
+  
+          // Event listener for the button
+          signUpButton.addEventListener('click', () => {
+              // Change the link's class from 'disabled' to 'enabled'
+              specialLink.classList.remove('disabled');
+              specialLink.classList.add('enabled');
           });
-        </script>
+      </script>
 		</body>
 		
             
