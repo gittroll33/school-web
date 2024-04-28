@@ -1,5 +1,8 @@
 console.log("Script is running");
 
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("The DOM is ready!");
+
 
 document.getElementById('signUpButton').addEventListener('click', function() {
     var number4 = document.getElementById('number4');
