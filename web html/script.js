@@ -1,3 +1,6 @@
+console.log("Script is running");
+
+
 document.getElementById('signUpButton').addEventListener('click', function() {
     var number4 = document.getElementById('number4');
     console.log('Sign-up button clicked');
