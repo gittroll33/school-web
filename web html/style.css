@@ -87,6 +87,13 @@ h1::first-letter {
     overflow: hidden;
   }
 
+  #number4 {
+    color: rgba(255, 255, 255, 0.5); /* Misty effect */
+    text-decoration: none;
+  }
+  
+
+
   
 
 
