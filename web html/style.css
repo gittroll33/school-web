@@ -87,11 +87,14 @@ h1::first-letter {
     border: none;
 }
 
+
 .topbuttons {
-  position: relative; /* Create a context for absolute positioning */
-  height: 60px; /* Adjust as needed */
-  padding: 10px; /* Optional padding */
-}
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  z-index: 100; 
+}  
+
 
 #signUpButton:hover {
     transform: translateY(-5px);
