@@ -90,8 +90,8 @@ h1::first-letter {
 
 .topbuttons {
   position: absolute; 
-  top: 20px; 
-  right: 20px; 
+  top: -70px; 
+  right: 1em; 
   z-index: 100; 
 }  
 
