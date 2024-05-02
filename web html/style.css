@@ -86,6 +86,13 @@ h1::first-letter {
     transition: all 0.2s ease;
 }
 
+.topbuttons {
+  position: relative; /* Create a context for absolute positioning */
+  height: 60px; /* Adjust as needed */
+  background-color: #f5f5f5; /* Example background */
+  padding: 10px; /* Optional padding */
+}
+
 #signUpButton button:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
