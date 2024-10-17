@@ -71,64 +71,26 @@ h1 {
   margin-top: 1.5vh; /* Použití vh pro mezery mezi odkazy */
 }
 
-#number3 {
-  background-image: url(https://cdn.wallpapersafari.com/86/86/A1wWjd.jpg);
-  background-size: cover; /* Zajištění, že obrázek bude správně vyplňovat pozadí */
-  background-position: center;
-}
+  #number3 {
+    background-image: url(https://cdn.wallpapersafari.com/86/86/A1wWjd.jpg);
+    background-size: 100%;
+    background-position: 0% 50%;
+    }
 
-#signUpButton {
-  display: block;
-  padding: 10px 2vw;
-  font-size: 2vw;
-  font-weight: bold;
-  color: #fff;
-  background-color: #1d1f2b;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  transition: all 0.2s ease;
-  border: none;
-}
 
-.topbuttons {
-  position: absolute; 
-  top: -7vh; /* Použití vh pro vertikální polohu */
-  right: 1em;
-  z-index: 100;
-}
 
-#signUpButton:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  background-color: #2c2f3e;
-}
+  .background {
+    background-image: url(https://i.pinimg.com/originals/ea/1d/97/ea1d9797c9bf3dda7a23b238e5e4b364.jpg);
+    opacity: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
 
-.background {
-  background-image: url(https://i.pinimg.com/originals/ea/1d/97/ea1d9797c9bf3dda7a23b238e5e4b364.jpg);
-  opacity: 70%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  background-size: cover; /* Zajištění, že pozadí bude pokrývat celou obrazovku */
-  background-position: center;
-}
+  
 
-.enabled {
-  color: white;
-  text-decoration: underline;
-  cursor: pointer;
-  opacity: 1;
-  pointer-events: auto;
-}
 
-.disabled {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  cursor: not-allowed;
-  opacity: 0.5;
-  pointer-events: none;
-}
