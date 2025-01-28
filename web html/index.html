@@ -7,93 +7,107 @@
     <link rel="stylesheet" type="text/css" href="style.css" /> 
     <title>Test1</title>
     <link rel="icon" href="icons/terraria-64x64.ico" sizes="32x32">
-  <style>
-</style>
   </head>
-    <body>
-			<div class="background"></div>
-			<div class="container">
-				<h1>Crossroad Website</h1>
-            <p>Klikněte na osobu, jejíž web chcete navštívit</p>
-				<div class="links">
-          <div class="topbuttons">
-            <a id="loginButton">Přihlásit se</a>
-            <a id="registerButton">Registrovat</a>
-          </div>
-					<a id="number1" href="David Hužvár.html">Daviddd Hužvár</a>
-					<a id="number2" href="Matěj Iljuchin.html">Matěj Iljuchin</a>
-					<a id="number3" href="David Klábeneš.html">David Klábeneš</a>
-          <a id="number4" href="Meteority.html" class="disabled">Meteority</a>
+  <body>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <div class="background"></div>
+    <div class="container">
+      <h1>Crossroad Website</h1>
+      <p>Klikněte na osobu, jejíž web chcete navštívit</p>
+      <div class="links">
+        <div class="topbuttons">
+          <a id="loginButton">Přihlásit se</a>
+          <a id="registerButton">Registrovat</a>
         </div>
-        </div>
+        <a id="number1" href="David Hužvár.html">David Hužvár</a>
+        <a id="number2" href="Matěj Iljuchin.html">Matěj Iljuchin</a>
+        <a id="number3" href="David Klábeneš.html">David Klábeneš</a>
+        <a id="number4" href="Meteority.html" class="disabled">Meteority</a>
+      </div>
+    </div>
 
-        <!-- Login Modal -->
-        <div id="loginModal" class="modal">
-          <span class="close" id="closeLogin">&times;</span>
-          <h2>Přihlášení</h2>
-          <form id="loginForm">
-            <input type="text" id="loginUsername" placeholder="Uživatelské jméno" required />
-            <input type="password" id="loginPassword" placeholder="Heslo" required />
-            <button type="submit">Přihlásit se</button>
-          </form>
-        </div>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <span class="close" id="closeLogin">&times;</span>
+      <h2>Přihlášení</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Uživatelské jméno" required />
+        <input type="password" id="loginPassword" placeholder="Heslo" required />
+        <button type="submit">Přihlásit se</button>
+      </form>
+    </div>
 
-        <!-- Registration Modal -->
-        <div id="registerModal" class="modal">
-          <span class="close" id="closeRegister">&times;</span>
-          <h2>Registrace</h2>
-          <form id="registerForm">
-            <input type="text" id="registerUsername" placeholder="Uživatelské jméno" required />
-            <input type="password" id="registerPassword" placeholder="Heslo" required />
-            <button type="submit">Registrovat</button>
-          </form>
-        </div>
+    <!-- Registration Modal -->
+    <div id="registerModal" class="modal">
+      <span class="close" id="closeRegister">&times;</span>
+      <h2>Registrace</h2>
+      <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Uživatelské jméno" required />
+        <input type="password" id="registerPassword" placeholder="Heslo" required />
+        <button type="submit">Registrovat</button>
+      </form>
+    </div>
 
-        <script>
-          // Open and close modals
-          const loginButton = document.getElementById('loginButton');
-          const registerButton = document.getElementById('registerButton');
-          const loginModal = document.getElementById('loginModal');
-          const registerModal = document.getElementById('registerModal');
-          const closeLogin = document.getElementById('closeLogin');
-          const closeRegister = document.getElementById('closeRegister');
+    <script>
+      // Open and close modals
+      const loginButton = document.getElementById('loginButton');
+      const registerButton = document.getElementById('registerButton');
+      const loginModal = document.getElementById('loginModal');
+      const registerModal = document.getElementById('registerModal');
+      const closeLogin = document.getElementById('closeLogin');
+      const closeRegister = document.getElementById('closeRegister');
+      const overlay = document.getElementById('overlay');
 
-          loginButton.addEventListener('click', () => loginModal.classList.add('active'));
-          registerButton.addEventListener('click', () => registerModal.classList.add('active'));
-          closeLogin.addEventListener('click', () => loginModal.classList.remove('active'));
-          closeRegister.addEventListener('click', () => registerModal.classList.remove('active'));
+      loginButton.addEventListener('click', () => {
+        loginModal.classList.add('active');
+        overlay.classList.add('active');
+      });
+      registerButton.addEventListener('click', () => {
+        registerModal.classList.add('active');
+        overlay.classList.add('active');
+      });
+      closeLogin.addEventListener('click', () => {
+        loginModal.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      closeRegister.addEventListener('click', () => {
+        registerModal.classList.remove('active');
+        overlay.classList.remove('active');
+      });
 
-          // Handle registration
-          const registerForm = document.getElementById('registerForm');
-          registerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('registerUsername').value;
-            const password = document.getElementById('registerPassword').value;
-            
-            // Save user data to LocalStorage
-            localStorage.setItem(username, password);
-            alert('Registrace úspěšná! Nyní se můžete přihlásit.');
-            registerModal.classList.remove('active');
-          });
+      // Handle registration
+      const registerForm = document.getElementById('registerForm');
+      registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('registerUsername').value;
+        const password = document.getElementById('registerPassword').value;
 
-          // Handle login
-          const loginForm = document.getElementById('loginForm');
-          loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
+        // Save user data to LocalStorage
+        localStorage.setItem(username, password);
+        alert('Registrace úspěšná! Nyní se můžete přihlásit.');
+        registerModal.classList.remove('active');
+        overlay.classList.remove('active');
+      });
 
-            // Validate user data from LocalStorage
-            if (localStorage.getItem(username) === password) {
-              alert('Přihlášení úspěšné!');
-              loginModal.classList.remove('active');
-            } else {
-              alert('Nesprávné uživatelské jméno nebo heslo!');
-            }
-          });
-        </script>
-        <script src="script.js"></script>
-		</body>
-		
-            
-            
+      // Handle login
+      const loginForm = document.getElementById('loginForm');
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+
+        // Validate user data from LocalStorage
+        if (localStorage.getItem(username) === password) {
+          alert('Přihlášení úspěšné!');
+          loginModal.classList.remove('active');
+          overlay.classList.remove('active');
+        } else {
+          alert('Nesprávné uživatelské jméno nebo heslo!');
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
